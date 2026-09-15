@@ -1,0 +1,24 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# 1. Load Built-in Dataset from Seaborn
+iris = sns.load_dataset('iris')
+
+# 2. Set Theme
+sns.set_theme(style="ticks")
+
+# 3. Create Scatter Plot with Hue and Style
+sns.scatterplot(
+    data=iris, 
+    x='sepal_length', 
+    y='petal_length', 
+    hue='species', 
+    style='species',
+    s=70  # marker size
+)
+
+# 4. Customization
+plt.title('Sepal Length vs Petal Length by Species')
+
+# 5. Display
+plt.show()
